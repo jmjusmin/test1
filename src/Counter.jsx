@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
-function Counter({ id, value }) {
+function Counter({ id, value, onChange }) {
   const [count, setCount] = useState(0);
 
   value = count;
 
-  const onDecrement = (id, value) => {
+  //1.Update the Counter component to take onIncrement and onDecrement callbacks as props and ensure they update the counter's values independently. Each callback should take a single, integer value as a parameter which is the amount to increment the counter's existing value by.
+
+  const onDecrement = (id, value, handleChange) => {
     console.log(`Key at ${id} : -, value: ${value}`);
     setCount(value - 1);
   };
