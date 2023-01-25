@@ -12,8 +12,8 @@ function App() {
 
   const [total, setTotal] = useState(0);
 
-  const handleChange = () => {
-    setTotal(total);
+  const handleChange = (value) => {
+    setTotal(total + value);
   };
 
   return (
@@ -29,7 +29,7 @@ function App() {
       ))}
 
       {/* 3. Render a fourth Counter component and ensure it's value is updated independently from the others. */}
-      <Counter id="4" value={0} handleChange={handleChange} />
+      <Counter id={4} value={0} handleChange={handleChange} />
 
       {/* 4. Create a Total component, which should display below the Counter components and always display the running total of all the Counter values. */}
       <Total total={total} />
